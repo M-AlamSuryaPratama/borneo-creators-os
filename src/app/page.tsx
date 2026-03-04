@@ -16,6 +16,7 @@ type HistoryItem = {
   id: string;
   tool: ToolKey;
   createdAt: number;
+  topic: string;
   prompt: string;
   logic: string;
   resultText: string;
@@ -223,6 +224,7 @@ export default function Home() {
         id: uid(),
         tool,
         createdAt: Date.now(),
+        topic,
         prompt,
         logic,
         resultText: text,
